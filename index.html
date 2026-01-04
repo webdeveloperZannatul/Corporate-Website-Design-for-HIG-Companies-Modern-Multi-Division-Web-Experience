@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIG Companies- Professional Asset Management Solutions</title>
+    <meta name="description" content="HIG Property Management offers comprehensive management services that optimize asset performance while maintaining the highest standards of operations.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a3a5f;
+            --secondary-color: #2c5282;
+            --accent-color: #38a169; /* Green accent for management/growth */
+            --text-dark: #2d3748;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1b1939;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.7), rgba(26, 58, 95, 0.6)), url('https://picsum.photos/seed/property-management-building/1920/800.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            margin: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2f855a;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .bg-light {
+            background-color: #dae4eb;
+        }
+
+        /* Overview Section */
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .overview-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .overview-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Mission & Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            background-color: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .portfolio-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--primary-color);
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-top: 0.25rem;
+        }
+
+        .contact-form {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1b1939;
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-about h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-about p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .values-grid,
+            .services-grid,
+            .portfolio-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-white);
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            nav ul.active {
+                transform: translateX(0);
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .overview-content,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <img style="height:60px; width: 160px;" src="https://i.postimg.cc/L5g6GddH/logo-removebg-preview.png">
+                   <!--  <i class="fas fa-building"></i>
+                    HIG Property Management -->
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul id="mainMenu">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#mission">Mission & Values</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Property Management</h1>
+                <p>Comprehensive management solutions that optimize asset performance while maintaining the highest standards of operations and resident satisfaction.</p>
+                <div>
+                    <a href="#contact" class="btn">Partner With Us</a>
+                    <a href="#portfolio" class="btn btn-outline">View Properties</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Excellence in Property Management</h2>
+                <p>HIG Property Management delivers comprehensive management services that maximize asset value and enhance resident experience.</p>
+            </div>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">With over 25 years of experience in property management, HIG Property Management has established itself as a trusted partner for property owners, investors, and housing authorities. Our team brings together expertise in operations, finance, compliance, and customer service to deliver exceptional results across diverse property types.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">We manage a diverse portfolio of residential and commercial properties, including affordable housing communities, market-rate apartments, hotels, and mixed-use developments. Our management approach is data-driven, resident-focused, and tailored to the specific needs of each property and owner.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Our commitment to operational excellence is reflected in our industry-leading occupancy rates, resident satisfaction scores, and asset performance metrics. We combine proven management systems with innovative technology to streamline operations, reduce costs, and enhance the living experience for residents.</p>
+                    <a href="#services" class="btn">Our Services</a>
+                </div>
+                <div class="overview-image">
+                    <img src="https://i.postimg.cc/zvZrQyqk/hero-best-hotel-management-company1.png" alt="Property Management Office">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-light" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>A team of dedicated professionals committed to operational excellence</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1.5rem;">Our Team</h3>
+                    <p style="margin-bottom: 1.5rem;">HIG Property Management is led by a team of seasoned professionals with extensive experience across all aspects of property operations. Our leadership includes certified property managers, compliance specialists, financial analysts, and customer service experts who work together to deliver exceptional results.</p>
+                    
+                    <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1.5rem;">Our Experience</h3>
+                    <p style="margin-bottom: 1.5rem;">We currently manage over 150 properties totaling more than 10,000 units across multiple states. Our portfolio includes affordable housing developments, market-rate apartments, senior living communities, hotels, and commercial properties. This diverse experience gives us unique insights into best practices across different property types and market conditions.</p>
+                    
+                    <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1.5rem;">Our Approach</h3>
+                    <p>We believe that successful property management requires a balanced approach that considers the needs of owners, residents, and staff. We focus on creating value through operational efficiency, proactive maintenance, strategic capital planning, and exceptional customer service. Our management philosophy emphasizes transparency, accountability, and continuous improvement.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/4yCLGt7N/HIG-Hotel-Development-About-us2.png" alt="HIG Property Management Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values Section -->
+    <section id="mission">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mission & Core Values</h2>
+                <p>The principles that guide our management approach and define our commitment to excellence</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Performance Excellence</h3>
+                    <p>We are committed to maximizing asset value and operational performance through data-driven decision making and continuous improvement.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Resident Focus</h3>
+                    <p>We put residents at the center of everything we do, creating communities where people are proud to live and work.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Compliance Integrity</h3>
+                    <p>We maintain the highest standards of regulatory compliance, ensuring all properties meet federal, state, and local requirements.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Operational Efficiency</h3>
+                    <p>We leverage technology, streamlined processes, and best practices to optimize operations and reduce costs without sacrificing quality.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Partnership Approach</h3>
+                    <p>We view our relationships with owners as true partnerships, working collaboratively to achieve shared goals and objectives.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Professional Development</h3>
+                    <p>We invest in our team's continuous learning and development, ensuring our staff has the knowledge and skills to excel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="bg-light" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive property management solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>Financial Management</h3>
+                    <p>Comprehensive accounting services including budget preparation, financial reporting, rent collection, expense management, and capital planning to optimize financial performance.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Leasing & Marketing</h3>
+                    <p>Strategic marketing programs, professional leasing services, and resident retention initiatives to maximize occupancy and revenue while reducing turnover costs.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Maintenance & Operations</h3>
+                    <p>Proactive maintenance programs, 24/7 emergency response, capital improvement planning, and vendor management to maintain property value and resident satisfaction.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Compliance Management</h3>
+                    <p>Expert handling of all regulatory requirements including affordable housing program compliance, fair housing laws, safety standards, and reporting obligations.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Resident Services</h3>
+                    <p>Professional customer service, community engagement programs, resident communications, and conflict resolution to create positive living environments.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Performance Reporting</h3>
+                    <p>Detailed monthly and quarterly performance reports with key metrics, trend analysis, and strategic recommendations to keep owners informed and engaged.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Managed Properties</h2>
+                <p>A diverse portfolio of properties managed with excellence and professionalism</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://i.postimg.cc/N0sLNPdG/Riverside-Apartments.png" alt="Riverside Apartments">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Riverside Apartments</h3>
+                        <p>200-unit market-rate apartment community with resort-style amenities and river views.</p>
+                        <div class="portfolio-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Portland, OR</span>
+                            <span>Market Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://i.postimg.cc/hGXfmZMv/Garden-View-Family-Housing.png" alt="Garden View Family Housing">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Garden View Family Housing</h3>
+                        <p>60-unit LIHTC family development with community spaces and supportive services.</p>
+                        <div class="portfolio-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Seattle, WA</span>
+                            <span>Affordable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://i.postimg.cc/SK9mqBDf/Sunset-Senior-Living.png" alt="Sunset Senior Living">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Sunset Senior Living</h3>
+                        <p>45-unit senior housing community with accessible design and wellness programs.</p>
+                        <div class="portfolio-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Spokane, WA</span>
+                            <span>Senior Housing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://i.postimg.cc/DwtBLL6s/Downtown-Mixed-Use.png" alt="Downtown Mixed-Use">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Downtown Mixed-Use</h3>
+                        <p>Mixed-use development with retail spaces and residential units in urban core.</p>
+                        <div class="portfolio-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Boise, ID</span>
+                            <span>Mixed-Use</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://picsum.photos/seed/luxury-hotel/400/300.jpg" alt="Grand Metropolitan Hotel">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Grand Metropolitan Hotel</h3>
+                        <p>250-room luxury hotel with conference facilities and premium dining options.</p>
+                        <div class="portfolio-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> New York, NY</span>
+                            <span>Hotel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://i.postimg.cc/J0vT12TJ/University-Heights.png" alt="University Heights">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>University Heights</h3>
+                        <p>150-unit student housing community near campus with study spaces and amenities.</p>
+                        <div class="portfolio-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Boston, MA</span>
+                            <span>Student Housing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-light" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimonials & References</h2>
+                <p>What our clients and partners say about our management services</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "HIG Property Management has transformed the performance of our portfolio. Their attention to detail, financial acumen, and commitment to resident satisfaction have exceeded our expectations. We couldn't ask for a better management partner."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://picsum.photos/seed/property-investor/100/100.jpg" alt="Robert Williams">
+                        </div>
+                        <div class="author-info">
+                            <h4>Robert Williams</h4>
+                            <p>Principal, Williams Real Estate Investments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "As a housing authority, we have stringent compliance requirements. HIG Property Management has consistently maintained 100% compliance while also improving resident satisfaction and property conditions. They are truly experts in affordable housing management."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://picsum.photos/seed/housing-director/100/100.jpg" alt="Jennifer Adams">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jennifer Adams</h4>
+                            <p>Executive Director, Metro Housing Authority</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The difference since HIG Property Management took over our property has been remarkable. Maintenance requests are handled quickly, the grounds are immaculate, and the staff is always professional and helpful. It's a wonderful place to live now."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://picsum.photos/seed/resident/100/100.jpg" alt="Maria Garcia">
+                        </div>
+                        <div class="author-info">
+                            <h4>Maria Garcia</h4>
+                            <p>Resident, Riverside Apartments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "HIG Property Management's financial reporting and transparency give us complete confidence in our investment. Their strategic approach to capital improvements has enhanced our property value while controlling expenses. Highly recommended."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://picsum.photos/seed/investment-manager/100/100.jpg" alt="David Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Chen</h4>
+                            <p>Investment Manager, Pine Grove Capital</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Property Gallery</h2>
+                <p>Visual highlights from our managed properties</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/4dnqsVfX/gallery1.png" alt="Property Exterior">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/sgN5bhN5/Gallery2.png" alt="Apartment Interior">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/WbK3vwTH/Gallery4.png" alt="Community Room">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/CK8nt68m/Gallery3.png" alt="Fitness Center">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/yYq1pYPw/Gallery5.png" alt="Pool Area">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/44PPBmsy/Business-Center.png" alt="Business Center">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/rmndtX2M/Property-Landscaping.png" alt="Property Landscaping">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/NjkRfnFy/Management-Team.png" alt="Management Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-light" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Discover how HIG Property Management can enhance your property's performance</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h3>Office</h3>
+                            <p>123 Management Blvd, Suite 300<br>Portland, OR 97201</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(503) 555-0300</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>management@higcompanies.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-handshake"></i>
+                        <div>
+                            <h3>Business Development</h3>
+                            <p>For property owners and investors interested in our management services, please contact our business development team.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="propertyContactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img style="height:60px; width: 160px;" src="https://i.postimg.cc/L5g6GddH/logo-removebg-preview.png">
+                    <!-- <h3>HIG Property Management</h3> -->
+                    <p>Professional property management services that optimize asset performance while maintaining the highest standards of operations and resident satisfaction.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#mission">Mission & Values</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Owner Portal</a></li>
+                        <li><a href="#">Resident Portal</a></li>
+                        <li><a href="#">Performance Reports</a></li>
+                        <li><a href="#">Compliance Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Management Blvd, Suite 300, Portland, OR 97201</li>
+                        <li><i class="fas fa-phone"></i> (503) 555-0300</li>
+                        <li><i class="fas fa-envelope"></i> management@higcompanies.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2026 HIG Companies. All rights reserved By Zanantul.| <a href="#" style="color: inherit;">Privacy Policy</a> | <a href="#" style="color: inherit;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+            document.getElementById('mainMenu').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mainMenu').classList.remove('active');
+                    document.querySelector('#mobileMenuToggle i').classList.remove('fa-times');
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('propertyContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Here you would normally send the data to a server
+            // For this demo, we'll just show a success message
+            const formContainer = this.parentElement;
+            formContainer.innerHTML = `
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your message has been sent successfully. Our team will be in touch with you shortly.</p>
+                    <button onclick="location.reload()" class="btn" style="margin-top: 1rem;">Send Another Message</button>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
