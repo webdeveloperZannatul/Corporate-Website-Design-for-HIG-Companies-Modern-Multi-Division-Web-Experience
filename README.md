@@ -1,0 +1,2 @@
+# Corporate-Website-Design-for-HIG-Companies-Modern-Multi-Division-Web-Experience
+I designed this concept to present HIG Companies as a unified,professional corporate brand.Each section is tailored to its target audience, emphasizing trust, experience, and clarity. The design is modern, mobile-responsive, easy to navigate, and built on a scalable WordPress CMS, making future content updates simple and efficient. Performance,SEO.
